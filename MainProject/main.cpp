@@ -20,11 +20,10 @@ int main() {
 	plane.running = true;
 
 	cout << "After: ";
-	plane.toString();
+	cout << plane.toString() << endl;
 
 	//2
 	Plane* ptrPlane = nullptr;
-
 	ptrPlane = new Plane;
 
 	ptrPlane->brand = "Boeing";
