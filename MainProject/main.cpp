@@ -4,38 +4,16 @@
 void print(Plane plane);
 
 int main() {
-	//1
-	Plane plane;
+	Student st1;
+	Student st2("Alex", "Chichikov");
+	Student st3("Ivan", "Ivanov", 15);
+	Student st4("Olya", "Sidorova", 14, 8, 'f', true, 9);
+	Student st5(st4);
 
-	cout << "Before: ";
-	cout << plane.toString() << endl;
-
-	plane.brand = "Boeing";
-	plane.model = "474-400";
-	plane.height = 15;
-	plane.width = 120;
-	plane.length = 100;
-	plane.seats = 700;
-	plane.speed = 1000;
-	plane.running = true;
-
-	cout << "After: ";
-	cout << plane.toString() << endl;
-
-	//2
-	Plane* ptrPlane = nullptr;
-	ptrPlane = new Plane;
-
-	ptrPlane->brand = "Boeing";
-	ptrPlane->model = "494-400";
-	ptrPlane->height = 16;
-	ptrPlane->width = 121;
-	ptrPlane->length = 120;
-	ptrPlane->seats = 709;
-	ptrPlane->speed = 1030;
-	ptrPlane->running = true;
-
-	cout << ptrPlane->toString() << endl;
+	cout << st1.toString() << endl;
+	cout << st2.toString() << endl;
+	cout << st3.toString() << endl;
+	cout << st4.toString() << endl;
 
 	return 0;
 }
