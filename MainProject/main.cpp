@@ -4,7 +4,7 @@
 int main() {
 	int size;
 
-	cout << "Input size";
+	cout << "Input size: ";
 	cin >> size;
 
 	Student* students = new Student[size];

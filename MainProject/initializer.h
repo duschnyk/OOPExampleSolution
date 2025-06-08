@@ -3,10 +3,12 @@
 class Initializer {
 public:
 	void init(Student* students, int size) {
-		const int nameSize = 10;
-		const string names[]{ "Alex", "Danik", "Max", "Mikita", "Arseniy",
+		const int NAMESIZE = 10;
+		const string NAMES[]{ "Alex", "Danik", "Max", "Mikita", "Arseniy",
 		"Arina", "Lina", "Anton", "Vera", "Ivan" };
 
+		const int ALFABET_SIZE = 26;
+		const string ALFABET = "QWERTYUIOPASDFGHJKLZXCVBNM";
 
 		int maxAge = 18;
 		int minAge = 13;
@@ -20,8 +22,8 @@ public:
 		for (int i = 0; i < size; i++)
 		{
 			Student temp;
-			temp.firstname = names[rand() % nameSize];
-			temp.surname = tolower((char)(rand() % ('Z' - 'A' + 1) + 'A')) + ".";
+			temp.firstname = NAMES[rand() % NAMESIZE];
+			temp.surname = ALFABET[rand()%ALFABET_SIZE];
 			temp.alive = true;
 			temp.age = rand() % (maxAge - minAge + 1) + minAge;
 			temp.mark = rand() % (maxMark - minMark + 1) + minMark;
@@ -29,6 +31,8 @@ public:
 			temp.size = 0;
 			temp.subjects = nullptr;
 			temp.gender = 'm';
+
+			students[i] = temp;
 		}
 	}
 };

@@ -13,13 +13,13 @@ public:
 	int size;
 	string* subjects;
 
-	// default-constructor (êîíñòðóêòîð ïî óìîë÷àíè)
+	// default-constructor 
 	Student() :Student("no name", "no surname") {
 		//cout << "default-constructor" << endl;
 
 	}
 
-	// constructor with arguments (êîíñòðóêòîðû ñ ïàðàìåòðàìè)
+	// constructor with arguments 
 	Student(string firstname, string surname) : firstname(firstname),
 		surname(surname), age(0), _class(0), gender('m'), alive(false),
 		mark(0), size(0), subjects(nullptr) {
@@ -31,7 +31,7 @@ public:
 		//cout << "constructor with arguments" << endl;
 	}
 
-	// canonical constructor (êàíîíè÷åñêèé êîíñòðóêòîð)
+	// canonical constructor 
 	Student(string firstname, string surname, int age, int _class,
 		char gender, bool alive, double mark, int size, string* subjects) {
 		//cout << "canonical constructor" << endl;
@@ -46,7 +46,7 @@ public:
 		this->subjects = subjects;;
 	}
 
-	// copy-constructor (êîíñòðóêòîð-êîïèðîâàíèÿ)
+	// copy-constructor 
 	Student(const Student& student) : Student(student.firstname,
 		student.surname, student.age, student._class, student.gender,
 		student.alive, student.mark, student.size, student.subjects) {
@@ -64,7 +64,7 @@ public:
 	string toString() {
 		string s = firstname;
 		s += " " + surname;
-		s += ", age = " + to_string(age);
+		s += ". age = " + to_string(age);
 		s += ", class = " + to_string(_class);
 		s += ", gender = " + to_string(gender);
 		s += ", is alive - ";
