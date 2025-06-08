@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="initializer.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="plane.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
