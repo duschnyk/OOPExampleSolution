@@ -1,4 +1,6 @@
+#pragma once
 #include"Student.h"
+
 //func-class
 class Initializer {
 public:

@@ -1,4 +1,5 @@
-﻿#include "main.h"
+﻿#pragma once
+#include "main.h"
 
 // entity-class
 class Student {
