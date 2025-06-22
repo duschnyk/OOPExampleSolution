@@ -1,7 +1,7 @@
-#include "Queue.h"
+#include "Stack.h"
 
 int main() {
-	Queue queue;
+	Stack stack;
 
 	cout << "input: ";
 	int number;
@@ -9,18 +9,18 @@ int main() {
 	do {
 		cin >> number;
 		if (number != 0) {
-			queue.enqueue(number);
+			stack.push(number);
 		}
 	} while (number != 0);
 
-	queue.dequeue();
-	queue.dequeue();
+	stack.pop();
+	stack.pop();
+	
+	cout << "head: " << stack.head() << endl;
+	cout << "queue elements: " << stack.toString() << endl;
 
-	cout << "head: " << queue.head() << endl;
-	cout << "queue elements: " << queue.toString() << endl;
-
-	queue.clear();
-	cout << "queue elements: " << queue.toString() << endl;
+	stack.clear();
+	cout << "queue elements: " << stack.toString() << endl;
 
 
 	return 0;
