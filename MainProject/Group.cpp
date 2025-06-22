@@ -39,33 +39,32 @@ void Group::add(int index, Student student) {
 		students[0] = student;
 
 	}
-	else
+	else if (index >= 0 && index < size)
 	{
-		if (index >= 0 && index < size)
+		size++;
+		Student* temp = new Student[size + 1];
+
+		for (int i = 0, j = 0; j < size; j++)
 		{
-			size++;
-			Student* temp = new Student[size + 1];
-
-			for (int i = 0, j = 0; j < size; j++)
-			{
-				if (i != index) {
-					temp[j] = students[i];
-					i++;
-				}
-				else
-				{
-					temp[j] = student;
-				}
+			if (i != index) {
+				temp[j] = students[i];
+				i++;
 			}
-
-			delete[] students;
-			students = temp;
+			else
+			{
+				temp[j] = student;
+			}
 		}
+
+		delete[] students;
+		students = temp;
 	}
 }
+
 void Group::remove() {
 	remove(size - 1);
 }
+
 void Group::remove(int index) {
 	if (!isEmpty() && index >= 0 && index < size)
 	{
@@ -84,6 +83,7 @@ void Group::remove(int index) {
 		students = temp;
 	}
 }
+
 void Group::remove(Student student) {
 	if (!isEmpty())
 	{
@@ -104,6 +104,7 @@ void Group::remove(Student student) {
 		students = temp;
 	}
 }
+
 void Group::clear() {
 	if (!isEmpty())
 	{
