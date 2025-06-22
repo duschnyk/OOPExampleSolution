@@ -15,6 +15,7 @@ public:
 	int getSize();
 	void add(Student student);
 	void add(int index, Student student);
+	void remove();
 	void remove(int index);
 	void remove(Student student);
 	void clear();
